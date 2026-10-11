@@ -13,5 +13,5 @@ loaded by Shopify from the URLs in the CSV. They are demo images for a test
 store: replace them with photos of your real products before selling.
 
 Images to upload by hand in Customize (image_picker settings cannot be set from Git):
-- Home → Image banner: https://unsplash.com/photos/two-people-sitting-on-the-hood-of-a-car (photo-1635650805023-f2529440b5aa)
-- Home → Image with text: photo-1739384994765-d44f7af12029
+- Home → Image banner: https://images.unsplash.com/photo-1635650805023-f2529440b5aa?w=2400&q=80&fm=jpg
+- Home → Image with text: https://images.unsplash.com/photo-1739384994765-d44f7af12029?w=1600&q=80&fm=jpg
