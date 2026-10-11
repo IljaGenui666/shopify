@@ -14,12 +14,12 @@
         "products_per_page": 16,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "image_shape": "default",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
         "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
@@ -27,10 +27,58 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "benefits": {
+      "type": "multicolumn",
+      "blocks": {
+        "b1": {
+          "type": "column",
+          "settings": {
+            "title": "Free shipping over $100",
+            "text": "<p>Orders ship within 2 business days.</p>"
+          }
+        },
+        "b2": {
+          "type": "column",
+          "settings": {
+            "title": "30-day returns",
+            "text": "<p>Wrong size? Send it back free of charge.</p>"
+          }
+        },
+        "b3": {
+          "type": "column",
+          "settings": {
+            "title": "Secure checkout",
+            "text": "<p>All major cards, Apple Pay and Shop Pay.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "benefits"
   ]
 }
