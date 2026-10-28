@@ -8,6 +8,14 @@
 :root {
   --card-button-hover: 122, 31, 43; /* burgundy #7A1F2B */
   --card-media-ratio: 125%; /* portrait 4:5 cards; must match image_ratio "portrait" in the templates */
+  --card-button-radius: 24px;
+}
+
+/* Rounded quick add button (all devices) */
+.product-card-wrapper .quick-add__submit,
+.product-card-wrapper .quick-add__submit::before,
+.product-card-wrapper .quick-add__submit::after {
+  border-radius: var(--card-button-radius);
 }
 
 /* Hover colours (all devices that support hover) */
@@ -34,7 +42,9 @@
     left: 0;
     right: 0;
     margin: 0;
-    padding: calc(var(--card-media-ratio) - 6.2rem) 1.2rem 0;
+    padding: calc(var(--card-media-ratio) - 5.2rem) 1.2rem 0;
+    display: flex;
+    justify-content: center;
     z-index: 2;
     pointer-events: none;
     opacity: 0;
@@ -44,6 +54,19 @@
   .product-card-wrapper .quick-add .quick-add__submit,
   .product-card-wrapper .quick-add product-form {
     pointer-events: auto;
+  }
+  /* Compact, minimal button over the photo */
+  .product-card-wrapper .quick-add .quick-add__submit {
+    width: auto;
+    min-width: 0;
+    min-height: 3.6rem;
+    padding: 0 2rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.06rem;
+  }
+  .product-card-wrapper .quick-add modal-opener,
+  .product-card-wrapper .quick-add product-form {
+    width: auto;
   }
   .product-card-wrapper:hover .quick-add,
   .product-card-wrapper:focus-within .quick-add {
