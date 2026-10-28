@@ -1,0 +1,60 @@
+/*
+  Redesign: product card states (loaded after base.css in layout/theme.liquid)
+  - Photo: light zoom on hover (Dawn's own 1.03 zoom; secondary image is off in the templates)
+  - Quick add button: hidden by default, appears over the bottom of the photo on hover (desktop with mouse only)
+  - Quick add button hover: burgundy background, white text and icon
+  Change the hover colour here: --card-button-hover (R, G, B)
+*/
+:root {
+  --card-button-hover: 122, 31, 43; /* burgundy #7A1F2B */
+  --card-media-ratio: 125%; /* portrait 4:5 cards; must match image_ratio "portrait" in the templates */
+}
+
+/* Hover colours (all devices that support hover) */
+.product-card-wrapper .quick-add__submit:not([disabled]):hover {
+  --color-button: var(--card-button-hover);
+  --color-button-text: 255, 255, 255;
+}
+.product-card-wrapper .quick-add__submit:not([disabled]):hover::after {
+  box-shadow: 0 0 0 var(--buttons-border-width) rgb(var(--card-button-hover));
+}
+.product-card-wrapper .quick-add__submit svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+/* Show the button only on hover, over the photo (desktop with a mouse) */
+@media screen and (min-width: 990px) and (hover: hover) {
+  .product-card-wrapper .card {
+    position: relative;
+  }
+  .product-card-wrapper .quick-add {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: calc(var(--card-media-ratio) - 6.2rem) 1.2rem 0;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(0.8rem);
+    transition: opacity var(--duration-short, 0.1s) ease, transform var(--duration-default, 0.2s) ease;
+  }
+  .product-card-wrapper .quick-add .quick-add__submit,
+  .product-card-wrapper .quick-add product-form {
+    pointer-events: auto;
+  }
+  .product-card-wrapper:hover .quick-add,
+  .product-card-wrapper:focus-within .quick-add {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card-wrapper .quick-add {
+    transition: none;
+    transform: none;
+  }
+}
