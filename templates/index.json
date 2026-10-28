@@ -13,7 +13,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "Heavyweight hoodies, boxy tees and outerwear built for the street.",
+            "text": "Puffers, sneakers and everyday layers \u2014 the new test drop.",
             "text_style": "subtitle"
           }
         },
@@ -23,8 +23,8 @@
             "button_label_1": "Shop new arrivals",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
-            "button_label_2": "Shop hoodies",
-            "button_link_2": "shopify://collections/hoodies",
+            "button_label_2": "Shop outerwear",
+            "button_link_2": "shopify://collections/outerwear",
             "button_style_secondary_2": true
           }
         }
@@ -44,7 +44,8 @@
         "color_scheme": "scheme-3",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": false,
-        "show_text_below": false
+        "show_text_below": false,
+        "image": "shopify://shop_images/photo_2_2026-10-18_19-10-55.jpg"
       }
     },
     "categories": {
@@ -53,25 +54,31 @@
         "c1": {
           "type": "featured_collection",
           "settings": {
-            "collection": "hoodies"
+            "collection": "outerwear"
           }
         },
         "c2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "t-shirts"
+            "collection": "sweatshirts"
           }
         },
         "c3": {
           "type": "featured_collection",
           "settings": {
-            "collection": "bottoms"
+            "collection": "shoes"
           }
         },
         "c4": {
           "type": "featured_collection",
           "settings": {
-            "collection": "outerwear"
+            "collection": "bags"
+          }
+        },
+        "c5": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tableware"
           }
         }
       },
@@ -79,13 +86,14 @@
         "c1",
         "c2",
         "c3",
-        "c4"
+        "c4",
+        "c5"
       ],
       "settings": {
         "title": "Shop by category",
         "heading_size": "h1",
         "image_ratio": "portrait",
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "color_scheme": "scheme-1",
         "show_view_all": false,
         "columns_mobile": "2",
@@ -174,18 +182,19 @@
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-2",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "image": "shopify://shop_images/photo_41_2026-10-18_19-10-55.jpg"
       }
     },
     "hoodies": {
       "type": "featured-collection",
       "settings": {
-        "title": "Hoodies",
+        "title": "Sneakers",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "hoodies",
+        "collection": "shoes",
         "products_to_show": 6,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
